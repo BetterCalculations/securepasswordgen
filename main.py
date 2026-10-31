@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 import win32print
 import win32ui
@@ -28,7 +28,7 @@ class PasswortGen:
 
     def start_gen(self, s, username):
         for i in range(self.length):
-            self.pw += random.choice(self.characters) # randomise the letter
+            self.pw += secrets.choice(self.characters) # randomise the letter
 
         self.header = f"Password for site: {s}" # the site for the password do you want to use as header
         txt_pw = self.pw # temp var  for pw 
